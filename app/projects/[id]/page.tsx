@@ -1,18 +1,14 @@
 'use client';
 
-import { projects } from '@/data/index';
-import { notFound, useParams, useRouter, useSearchParams } from 'next/navigation';
+import { useRouter, useSearchParams } from 'next/navigation';
 import React from 'react';
 import { FaArrowLeft } from 'react-icons/fa';
 import { StickyScroll } from "../../../components/ui/sticky-scroll-reveal";
 import { contents } from '../data';
 
-export default function ProjectPage({
-    params,
-}: {
-    params: { id: string };
-}) {
+export default function ProjectPage() {
     const searchParams = useSearchParams();
+    const router = useRouter();
     const projectId = searchParams.get("projectId");
 
     if (!projectId || isNaN(Number(projectId))) {
@@ -20,9 +16,6 @@ export default function ProjectPage({
     }
 
     const id = Number(projectId);
-
-    const router = useRouter();
-
 
     return (
         <div className="pt-14 w-full">
