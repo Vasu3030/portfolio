@@ -3,7 +3,8 @@ import { cn } from "@/utils/cn";
 import MagicButton from '../ui/MagicButton';
 import { IoCopyOutline } from "react-icons/io5";
 import { useState } from "react";
-import Image from "next/image";
+import { FaLinkedin } from "react-icons/fa";
+import { HiOutlineDocumentText } from "react-icons/hi";
 
 export const BentoGrid = ({
   className,
@@ -121,15 +122,38 @@ export const BentoGridItem = ({
           )}
 
           {id === 4 && (
-          <div className="">
-            <MagicButton
-              title={copy ? 'Email copié !' : 'Copier mon email'}
-              icon={<IoCopyOutline />}
-              position='left'
-              handleClick={handleCopy}
-            />
-          </div>
-        )}
+            <div className="flex flex-col justify-center items-center">
+              <MagicButton
+                title={copy ? 'Email copié !' : 'Copier mon email'}
+                icon={<IoCopyOutline />}
+                position='left'
+                handleClick={handleCopy}
+              />
+              <div className="flex flex-row justify-around items-center pt-5 w-full space-x-6">
+                {/* LinkedIn */}
+                <a
+                  href="https://www.linkedin.com/in/vassou-a-5535711ba/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center space-x-2 text-blue-600 hover:underline"
+                >
+                  <FaLinkedin className="text-xl" />
+                  <span>LinkedIn</span>
+                </a>
+
+                {/* CV */}
+                <a
+                  href="/CV_VassouAroun_Developpeur.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center space-x-2 text-blue-400 hover:underline"
+                >
+                  <HiOutlineDocumentText className="text-xl" />
+                  <span>Voir mon CV</span>
+                </a>
+              </div>
+            </div>
+          )}
         </div>
       </div>
     </div>
