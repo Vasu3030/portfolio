@@ -192,7 +192,7 @@ export const intro = [
       className: "text-center md:tracking-wider mb-4 text-sm md:text-lg lg:text-2xl",
     },
     {
-      text: "m'appelle",
+      text: "suis",
       className: "text-center md:tracking-wider mb-4 text-sm md:text-lg lg:text-2xl",
     },
     {
