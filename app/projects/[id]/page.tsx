@@ -3,8 +3,8 @@
 import { useRouter, useSearchParams } from 'next/navigation';
 import React from 'react';
 import { FaArrowLeft } from 'react-icons/fa';
-import { StickyScroll } from "../../../components/ui/sticky-scroll-reveal";
 import { contents } from '../data';
+import Content from '@/components/Content';
 
 export default function ProjectPage() {
     const searchParams = useSearchParams();
@@ -18,8 +18,7 @@ export default function ProjectPage() {
     const id = Number(projectId);
 
     return (
-        <div className="pt-14 w-full">
-            <div>
+        <div className='flex flex-col justify-center items-center py-20 px-3'>
                 <button
                     onClick={() => router.push('/#projects')}
                     className="fixed top-2 left-2 z-50 w-[8rem] flex flex-row justify-around items-center px-2 py-2 bg-[#0f172a] text-white hover:text-blue-400 transition rounded-md shadow-lg cursor-pointer"
@@ -28,9 +27,7 @@ export default function ProjectPage() {
                     <FaArrowLeft />
                     <span>Retour</span>
                 </button>
-            </div>
-
-            <StickyScroll content={contents[id].content} />
+                <Content content={contents[id].content} />
         </div>
     );
 }
