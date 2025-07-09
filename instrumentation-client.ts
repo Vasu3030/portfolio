@@ -17,7 +17,10 @@ Sentry.init({
       // Additional SDK configuration goes in here, for example:
       colorScheme: "dark",
     }),
+    Sentry.replayIntegration(),
   ],
+  replaysSessionSampleRate: 0.1, // This sets the sample rate at 10%. You may want to change it to 100% while in development and then sample at a lower rate in production.
+  replaysOnErrorSampleRate: 1.0,
 });
 
 export const onRouterTransitionStart = Sentry.captureRouterTransitionStart;
