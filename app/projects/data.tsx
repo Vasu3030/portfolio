@@ -58,8 +58,19 @@ export const contents = [
                 description:
                     "Le portail a été développé avec un stack fullstack moderne : ReactJs + TypeScript côté frontend, NodeJs (Express) pour les APIs. La base de données était en MySQL, et PHP avant la refonte du portail. L’UI utilisait TailwindCSS pour un design rapide et responsive.",
                 content: (
-                    <div className="flex flex-wrap h-full w-full items-center justify-center bg-gradient-to-br from-[#000319] to-[#0f172a] text-white text-xl font-bold p-20">
-                        ReactJs · NodeJs · TypeScript · MySQL · PHP
+                    <div className="flex flex-row gap-18 justify-center items-center">
+                        <div className="pt-3 flex flex-wrap justify-center items-center gap-4 min-w-30">
+                            {['ReactJs', 'NodeJs', 'TypeScript', 'Express', 'TailwindCSS', 'MySQL', 'PHP'].map((item, i) => (
+                                <span
+                                    key={i}
+                                    className="py-2 px-3 text-xs hover:text-sm
+                    rounded-lg text-center border border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-white
+                    transition-all duration-150 ease-in-out"
+                                >
+                                    {item}
+                                </span>
+                            ))}
+                        </div>
                     </div>
                 ),
             },
@@ -138,8 +149,19 @@ export const contents = [
                 description:
                     "L’interface utilisateur a été développée avec ReactJs et TailwindCSS pour une expérience fluide et responsive. Le backend s’appuyait sur une architecture NodeJs et Serverless avec AWS (Lambda, IoT Core, DynamoDB). L’infrastructure était provisionnée avec Terraform pour une gestion automatisée et versionnée de l’environnement cloud.",
                 content: (
-                    <div className="flex flex-wrap h-full w-full items-center justify-center bg-gradient-to-br from-[#000846] to-[#000000] text-white text-xl font-bold p-20">
-                        ReactJs · NodeJs · TailwindCSS · AWS · Serverless · Terraform · MySQL
+                    <div className="flex flex-row gap-18 justify-center items-center">
+                        <div className="pt-3 flex flex-wrap justify-center items-center gap-4 min-w-30">
+                            {['ReactJs', 'NodeJs', 'TypeScript', 'TailwindCSS', 'AWS', 'Serverless', 'Terraform', 'MySQL',].map((item, i) => (
+                                <span
+                                    key={i}
+                                    className="py-2 px-3 text-xs hover:text-sm
+                    rounded-lg text-center border border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-white
+                    transition-all duration-150 ease-in-out"
+                                >
+                                    {item}
+                                </span>
+                            ))}
+                        </div>
                     </div>
                 ),
             },
