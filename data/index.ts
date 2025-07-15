@@ -50,12 +50,13 @@ export const gridItems = [
 export const projects = [
   {
     id: 0,
-    title: "Portail CNIP",
-    des: "Refonte d'un portail interne chez Econocom permettant de suivre la production du groupe et de gérer les collaborateurs",
-    img: "/econocom.jpg",
-    iconLists: ["/re.svg", "/node.png", "/ts.svg", "/tail.svg", "/mysql.svg", "/php.svg"],
-    technos: ["ReactJs", "NodeJs", "TypeScript", "Express", "MySQL", "PHP"],
-    link: "/econocom",
+    title: "LetMeCook",
+    des: "Site responsive proposants des plats avec recettes en fonction de vos ingrédients et envies",
+    img: "/letmecook.png",
+    iconLists: ["/next.svg", "/ts.svg", "/tail.svg", "/openai.png"],
+    technos: ["NextJs", "TypeScript", "OpenAi", "TailwinCSS", "Shadcn"],
+    link: "https://letmecook-five.vercel.app/",
+    deployed: true,
   },
   {
     id: 1,
@@ -65,6 +66,17 @@ export const projects = [
     iconLists: ["/re.svg", "/node.png", "/ts.svg", "/serverless.png", "/aws.jpg", "/terraform.png"],
     technos: ["ReactJs", "NodeJs", "TypeScript", "Serverless", "AWS", "Terraform"],
     link: "/gassense",
+    deployed: false,
+  },
+  {
+    id: 2,
+    title: "Portail CNIP",
+    des: "Refonte d'un portail interne chez Econocom permettant de suivre la production du groupe et de gérer les collaborateurs",
+    img: "/econocom.jpg",
+    iconLists: ["/re.svg", "/node.png", "/ts.svg", "/tail.svg", "/mysql.svg", "/php.svg"],
+    technos: ["ReactJs", "NodeJs", "TypeScript", "Express", "MySQL", "PHP"],
+    link: "/econocom",
+    deployed: false,
   },
 ];
 
