@@ -49,7 +49,7 @@ export const gridItems = [
 
 export const projects = [
   {
-    id: 0,
+    id: 2,
     title: "LetMeCook",
     des: "Site responsive proposants des plats avec recettes en fonction de vos ingrédients et envies",
     img: "/letmecook.png",
@@ -69,7 +69,7 @@ export const projects = [
     deployed: false,
   },
   {
-    id: 2,
+    id: 0,
     title: "Portail CNIP",
     des: "Refonte d'un portail interne chez Econocom permettant de suivre la production du groupe et de gérer les collaborateurs",
     img: "/econocom.jpg",

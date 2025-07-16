@@ -13,7 +13,9 @@ const Projects = () => {
                 {projects.map((project) => (
                     <Link
                         key={project.id}
-                        target='_blank'
+                        target={project.deployed
+                            ? "_blank"
+                            : "_self"}
                         href={project.deployed
                             ? project.link
                             : `/projects${project.link}?projectId=${project.id}`}
